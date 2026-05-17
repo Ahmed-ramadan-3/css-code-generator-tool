@@ -1,0 +1,260 @@
+/* Cyber Foundry system theme: Arabic RTL, dark glass panels, electric cyan accents, sharp depth. */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1.15rem;
+  --background: oklch(0.15 0.02 258);
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.2 0.02 255 / 0.84);
+  --card-foreground: oklch(0.97 0.01 250);
+  --popover: oklch(0.18 0.03 256 / 0.96);
+  --popover-foreground: oklch(0.97 0.01 250);
+  --primary: oklch(0.76 0.17 213);
+  --primary-foreground: oklch(0.12 0.02 252);
+  --secondary: oklch(0.24 0.02 255);
+  --secondary-foreground: oklch(0.96 0.01 250);
+  --muted: oklch(0.26 0.02 255);
+  --muted-foreground: oklch(0.74 0.02 250);
+  --accent: oklch(0.27 0.04 218);
+  --accent-foreground: oklch(0.97 0.01 250);
+  --destructive: oklch(0.65 0.24 24);
+  --border: oklch(0.55 0.06 220 / 0.26);
+  --input: oklch(0.3 0.03 250 / 0.85);
+  --ring: oklch(0.79 0.14 205);
+  --chart-1: oklch(0.8 0.17 215);
+  --chart-2: oklch(0.79 0.16 155);
+  --chart-3: oklch(0.72 0.19 327);
+  --chart-4: oklch(0.84 0.17 88);
+  --chart-5: oklch(0.73 0.15 22);
+  --sidebar: oklch(0.18 0.03 255 / 0.94);
+  --sidebar-foreground: oklch(0.97 0.01 250);
+  --sidebar-primary: oklch(0.76 0.17 213);
+  --sidebar-primary-foreground: oklch(0.12 0.02 252);
+  --sidebar-accent: oklch(0.26 0.03 230);
+  --sidebar-accent-foreground: oklch(0.97 0.01 250);
+  --sidebar-border: oklch(0.55 0.06 220 / 0.24);
+  --sidebar-ring: oklch(0.78 0.14 210);
+}
+
+.dark {
+  --background: oklch(0.15 0.02 258);
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.2 0.02 255 / 0.84);
+  --card-foreground: oklch(0.97 0.01 250);
+  --popover: oklch(0.18 0.03 256 / 0.96);
+  --popover-foreground: oklch(0.97 0.01 250);
+  --primary: oklch(0.76 0.17 213);
+  --primary-foreground: oklch(0.12 0.02 252);
+  --secondary: oklch(0.24 0.02 255);
+  --secondary-foreground: oklch(0.96 0.01 250);
+  --muted: oklch(0.26 0.02 255);
+  --muted-foreground: oklch(0.74 0.02 250);
+  --accent: oklch(0.27 0.04 218);
+  --accent-foreground: oklch(0.97 0.01 250);
+  --destructive: oklch(0.65 0.24 24);
+  --border: oklch(0.55 0.06 220 / 0.26);
+  --input: oklch(0.3 0.03 250 / 0.85);
+  --ring: oklch(0.79 0.14 205);
+  --chart-1: oklch(0.8 0.17 215);
+  --chart-2: oklch(0.79 0.16 155);
+  --chart-3: oklch(0.72 0.19 327);
+  --chart-4: oklch(0.84 0.17 88);
+  --chart-5: oklch(0.73 0.15 22);
+  --sidebar: oklch(0.18 0.03 255 / 0.94);
+  --sidebar-foreground: oklch(0.97 0.01 250);
+  --sidebar-primary: oklch(0.76 0.17 213);
+  --sidebar-primary-foreground: oklch(0.12 0.02 252);
+  --sidebar-accent: oklch(0.26 0.03 230);
+  --sidebar-accent-foreground: oklch(0.97 0.01 250);
+  --sidebar-border: oklch(0.55 0.06 220 / 0.24);
+  --sidebar-ring: oklch(0.78 0.14 210);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+    box-sizing: border-box;
+  }
+
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(35, 211, 238, 0.15), transparent 28%),
+      radial-gradient(circle at 80% 0%, rgba(145, 92, 255, 0.08), transparent 24%),
+      radial-gradient(circle at 50% 100%, rgba(20, 142, 255, 0.11), transparent 28%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 28%),
+      linear-gradient(180deg, #050816 0%, #091120 45%, #04060d 100%);
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(circle at center, black 42%, transparent 88%);
+    opacity: 0.35;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  ::selection {
+    background: rgba(61, 215, 255, 0.28);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05)),
+      rgba(7, 12, 24, 0.7);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(123, 225, 255, 0.16);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+      0 24px 60px rgba(0, 0, 0, 0.34),
+      0 0 50px rgba(0, 173, 255, 0.08);
+  }
+
+  .grid-glow {
+    background-image:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 36%),
+      linear-gradient(180deg, rgba(40, 203, 255, 0.08), transparent 100%);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(89, 203, 255, 0.4) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(75, 212, 255, 0.6), rgba(70, 117, 255, 0.32));
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .control-shell {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(126, 183, 255, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .section-title {
+    color: #eef6ff;
+    letter-spacing: 0.02em;
+    font-weight: 800;
+  }
+
+  .section-kicker {
+    color: rgba(145, 209, 255, 0.72);
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .control-label {
+    color: rgba(237, 245, 255, 0.92);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .control-hint {
+    color: rgba(173, 196, 225, 0.72);
+    font-size: 0.78rem;
+  }
+
+  .cyber-input,
+  .cyber-select,
+  .cyber-textarea {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid rgba(123, 225, 255, 0.15);
+    background: linear-gradient(180deg, rgba(10, 16, 32, 0.92), rgba(9, 15, 28, 0.74));
+    color: #f4f8ff;
+    padding: 0.8rem 0.95rem;
+    transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  }
+
+  .cyber-input:focus,
+  .cyber-select:focus,
+  .cyber-textarea:focus {
+    outline: none;
+    border-color: rgba(74, 222, 255, 0.62);
+    box-shadow: 0 0 0 4px rgba(40, 196, 255, 0.12);
+  }
+
+  .cyber-range {
+    width: 100%;
+    accent-color: #48d9ff;
+  }
+
+  .code-line:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
